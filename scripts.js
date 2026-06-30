@@ -23,7 +23,9 @@
     // ============================================================
     //  2. FOOTER YEAR
     // ============================================================
-    document.getElementById("footer-year")?.textContent = new Date().getFullYear();
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
 
     // ============================================================
     //  3. MOBILE MENU
