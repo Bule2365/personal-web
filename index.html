@@ -14,16 +14,11 @@
   <meta property="og:title" content="Daffa Aria — Full-Stack Developer &amp; Data Analyst" />
   <meta property="og:description"
     content="Portfolio CV Daffa Aria, Full-Stack Developer &amp; Data Analyst berbasis di Jakarta." />
+  <meta property="og:image" content="https://daffaaria.dev/images/avatar-developer.png" />
   <meta property="og:url" content="https://daffaaria.dev" />
   <meta property="og:site_name" content="Daffa Aria" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daffa Aria — Full-Stack Developer &amp; Data Analyst" />
-  <meta name="twitter:description"
-    content="Portfolio CV Daffa Aria, Full-Stack Developer &amp; Data Analyst berbasis di Jakarta." />
 
-  <!-- ============================================================
-       CDN Libraries
-  ============================================================ -->
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -97,6 +92,8 @@
          HERO
     ============================================================ -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
+      <!-- Background hero menggunakan gambar -->
+      <div class="hero__bg" style="background-image: url('images/hero-workspace.jpg');"></div>
       <div class="container hero__inner">
         <span class="hero__label" data-aos="fade-up" data-aos-duration="600">
           <span class="hero__label-line"></span>
@@ -153,7 +150,7 @@
         <div class="about__grid">
           <div class="about__avatar-wrap" data-aos="fade-right" data-aos-duration="700">
             <div class="about__avatar">
-              <span class="about__avatar-initials">DA</span>
+              <img src="images/avatar-developer.png" alt="Foto Daffa Aria" width="280" height="280" loading="lazy" />
             </div>
             <div class="about__badge" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
               <span class="about__badge-number" id="experienceCounter">0</span>
@@ -361,18 +358,29 @@
 
         <ul class="education__grid">
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="education__image">
+              <img src="images/education-campus.jpg" alt="Gedung kampus modern" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
             <h3 class="education__degree">S1 Ilmu Komputer</h3>
             <p class="education__school">Universitas Indonesia</p>
             <p class="education__year">2017 – 2021 &nbsp;·&nbsp; IPK 3.72 / 4.00</p>
           </li>
+
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="education__image">
+              <img src="images/education-campus.jpg" alt="Gedung kampus modern" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-certificate"></i></span>
             <h3 class="education__degree">AWS Certified Developer – Associate</h3>
             <p class="education__school">Amazon Web Services</p>
             <p class="education__year">2023 &nbsp;·&nbsp; Sertifikasi Aktif</p>
           </li>
+
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div class="education__image">
+              <img src="images/education-campus.jpg" alt="Gedung kampus modern" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
             <h3 class="education__degree">Meta Frontend Developer Certificate</h3>
             <p class="education__school">Coursera / Meta</p>
@@ -395,24 +403,39 @@
 
         <ul class="education__grid">
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="education__image">
+              <img src="images/certificate-aws.jpg" alt="Sertifikat AWS" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-cloud"></i></span>
             <h3 class="education__degree">Google Cloud Digital Leader</h3>
             <p class="education__school">Google Cloud</p>
             <p class="education__year">2024 · Kredensial: #GCP-12345</p>
           </li>
+
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="education__image">
+              <img src="images/certificate-aws.jpg" alt="Sertifikat JavaScript" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-brands fa-js"></i></span>
             <h3 class="education__degree">JavaScript Advanced (ES6+)</h3>
             <p class="education__school">Dicoding Indonesia</p>
             <p class="education__year">2023 · Sertifikasi Kelulusan</p>
           </li>
+
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div class="education__image">
+              <img src="images/certificate-aws.jpg" alt="Sertifikat Penghargaan Relawan" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
             <h3 class="education__degree">Penghargaan Relawan Terbaik</h3>
             <p class="education__school">Kementerian Sosial RI</p>
             <p class="education__year">2022 · Program Literasi Digital</p>
           </li>
+
           <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+            <div class="education__image">
+              <img src="images/certificate-aws.jpg" alt="Sertifikat UI/UX" loading="lazy" />
+            </div>
             <span class="education__icon" aria-hidden="true"><i class="fa-brands fa-figma"></i></span>
             <h3 class="education__degree">UI/UX Design with Figma</h3>
             <p class="education__school">BuildWith Angga</p>
@@ -549,6 +572,9 @@
 
         <ul class="projects__grid">
           <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="projects__image">
+              <img src="images/project-tokoku.jpg" alt="TokoKu — E-commerce UMKM" loading="lazy" />
+            </div>
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
             <h3 class="projects__title">TokoKu — E-commerce UMKM</h3>
             <p class="projects__desc">Platform e-commerce sederhana dengan fitur keranjang, pembayaran virtual, dan
@@ -568,6 +594,9 @@
           </li>
 
           <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="projects__image">
+              <img src="images/project-healthtrack.jpg" alt="HealthTrack — Aplikasi Kesehatan" loading="lazy" />
+            </div>
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-notes-medical"></i></span>
             <h3 class="projects__title">HealthTrack — Aplikasi Kesehatan</h3>
             <p class="projects__desc">Aplikasi pencatatan tekanan darah dan gula darah dengan visualisasi grafik.
@@ -584,6 +613,9 @@
           </li>
 
           <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div class="projects__image">
+              <img src="images/project-chatbot.jpg" alt="ChatBot AI — Customer Service" loading="lazy" />
+            </div>
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-robot"></i></span>
             <h3 class="projects__title">ChatBot AI — Customer Service</h3>
             <p class="projects__desc">Chatbot berbasis NLP sederhana untuk menjawab pertanyaan umum pelanggan. Dibangun
@@ -602,6 +634,9 @@
           </li>
 
           <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+            <div class="projects__image">
+              <img src="images/project-tokoku.jpg" alt="Design System UI Kit" loading="lazy" />
+            </div>
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
             <h3 class="projects__title">Design System UI Kit</h3>
             <p class="projects__desc">Koleksi komponen UI (button, form, modal, card) yang reusable dan dokumentasi
@@ -694,7 +729,7 @@
   </button>
 
   <!-- ============================================================
-       TOAST NOTIFICATION (Bootstrap)
+       TOAST NOTIFICATION
   ============================================================ -->
   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">

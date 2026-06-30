@@ -231,7 +231,7 @@
     }
 
     // ============================================================
-    //  11. AOS (Animate On Scroll) — Inisialisasi
+    //  11. AOS
     // ============================================================
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -244,7 +244,7 @@
     }
 
     // ============================================================
-    //  12. Typed.js — Efek mengetik di hero
+    //  12. TYPED.JS
     // ============================================================
     if (typeof Typed !== 'undefined') {
         const typedElement = document.getElementById('typed-text');
@@ -269,7 +269,7 @@
     }
 
     // ============================================================
-    //  13. Bootstrap Tooltip
+    //  13. BOOTSTRAP TOOLTIP
     // ============================================================
     if (typeof bootstrap !== 'undefined') {
         const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -277,7 +277,7 @@
     }
 
     // ============================================================
-    //  14. Toast Notification (Bootstrap)
+    //  14. TOAST NOTIFICATION
     // ============================================================
     if (typeof bootstrap !== 'undefined') {
         const toastEl = document.getElementById('liveToast');
@@ -286,7 +286,6 @@
                 delay: 5000,
                 animation: true,
             });
-            // Tampilkan toast setelah 1.5 detik
             setTimeout(() => {
                 toast.show();
             }, 1500);
@@ -294,7 +293,7 @@
     }
 
     // ============================================================
-    //  15. Counter Animation (Pengalaman di About Badge)
+    //  15. COUNTER ANIMATION
     // ============================================================
     (function counterAnimation() {
         const counterEl = document.getElementById('experienceCounter');
