@@ -7,7 +7,7 @@
   <title>Daffa Aria — Full-Stack Developer &amp; Data Analyst</title>
   <meta name="description"
     content="Portfolio CV Daffa Aria, Full-Stack Developer berbasis di Jakarta. Spesialis React, Node.js, dan desain antarmuka intuitif." />
-  <meta name="theme-color" content="#fafafa" />
+  <meta name="theme-color" content="#f8f9fa" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -21,6 +21,9 @@
   <meta name="twitter:description"
     content="Portfolio CV Daffa Aria, Full-Stack Developer &amp; Data Analyst berbasis di Jakarta." />
 
+  <!-- ============================================================
+       CDN Libraries
+  ============================================================ -->
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +34,13 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- CSS -->
+  <!-- Bootstrap 5 (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS Utama -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -57,7 +66,8 @@
           <li role="none"><a href="#projects" role="menuitem" class="nav-link">Proyek</a></li>
           <li role="none"><a href="#contact" role="menuitem" class="nav-link">Kontak</a></li>
           <li role="none">
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-bs-toggle="tooltip"
+              data-bs-placement="bottom" title="Toggle tema">
               <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
           </li>
@@ -88,22 +98,26 @@
     ============================================================ -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
-        <span class="hero__label" aria-hidden="true">
+        <span class="hero__label" data-aos="fade-up" data-aos-duration="600">
           <span class="hero__label-line"></span>
           Tersedia untuk peluang baru
         </span>
 
-        <h1 id="hero-title" class="hero__name">Daffa Aria</h1>
+        <h1 id="hero-title" class="hero__name" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          Daffa Aria
+        </h1>
 
-        <p class="hero__title"><strong>Full-Stack Developer</strong></p>
+        <p class="hero__title" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <strong><span id="typed-text"></span></strong>
+        </p>
 
-        <p class="hero__bio">
+        <p class="hero__bio" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
           Saya menggabungkan pengembangan backend dengan analisis data untuk menciptakan solusi yang efisien dan
           berbasis data. Berpengalaman dalam membangun API, mengelola database, serta menyajikan insight yang mendukung
           kebutuhan bisnis.
         </p>
 
-        <div class="hero__actions">
+        <div class="hero__actions" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
           <a href="#contact" class="btn btn--primary">
             <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             Hubungi Saya
@@ -114,16 +128,17 @@
           </a>
         </div>
 
-        <div class="hero__socials">
+        <div class="hero__socials" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
           <a href="https://github.com/Bule2365" target="_blank" rel="noopener noreferrer" class="social-link"
-            aria-label="GitHub — buka di tab baru">
+            aria-label="GitHub — buka di tab baru" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
           <a href="https://linkedin.com/in/leaddaf" target="_blank" rel="noopener noreferrer" class="social-link"
-            aria-label="LinkedIn — buka di tab baru">
+            aria-label="LinkedIn — buka di tab baru" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
           </a>
-          <a href="mailto:ariadaffa127@email.com" class="social-link" aria-label="Kirim email ke Daffa Aria">
+          <a href="mailto:ariadaffa127@email.com" class="social-link" aria-label="Kirim email ke Daffa Aria"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="Email">
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
@@ -136,17 +151,17 @@
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="container">
         <div class="about__grid">
-          <div class="about__avatar-wrap">
+          <div class="about__avatar-wrap" data-aos="fade-right" data-aos-duration="700">
             <div class="about__avatar">
               <span class="about__avatar-initials">DA</span>
             </div>
-            <div class="about__badge">
-              <span class="about__badge-number">3+</span>
+            <div class="about__badge" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <span class="about__badge-number" id="experienceCounter">0</span>
               <span class="about__badge-label">Tahun Pengalaman</span>
             </div>
           </div>
 
-          <div class="about__content">
+          <div class="about__content" data-aos="fade-left" data-aos-duration="700">
             <div class="section-header">
               <span class="section-eyebrow">Tentang Saya</span>
               <h2 id="about-title" class="section-title">Developer yang senang memecahkan masalah nyata</h2>
@@ -191,14 +206,14 @@
     ============================================================ -->
     <section id="experience" class="section section--alt" aria-labelledby="experience-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="600">
           <span class="section-eyebrow">Pengalaman Kerja</span>
           <h2 id="experience-title" class="section-title">Karier Profesional</h2>
           <div class="section-divider"></div>
         </div>
 
         <ol class="timeline">
-          <li class="timeline__item">
+          <li class="timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <span class="timeline__dot" aria-hidden="true"></span>
             <article class="timeline__card">
               <header class="timeline__header">
@@ -219,7 +234,7 @@
             </article>
           </li>
 
-          <li class="timeline__item">
+          <li class="timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <span class="timeline__dot" aria-hidden="true"></span>
             <article class="timeline__card">
               <header class="timeline__header">
@@ -240,7 +255,7 @@
             </article>
           </li>
 
-          <li class="timeline__item">
+          <li class="timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <span class="timeline__dot" aria-hidden="true"></span>
             <article class="timeline__card">
               <header class="timeline__header">
@@ -267,14 +282,14 @@
     ============================================================ -->
     <section id="organization" class="section" aria-labelledby="org-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="600">
           <span class="section-eyebrow">Organisasi & Relawan</span>
           <h2 id="org-title" class="section-title">Kontribusi Sosial &amp; Kepemimpinan</h2>
           <div class="section-divider"></div>
         </div>
 
         <ol class="timeline">
-          <li class="timeline__item">
+          <li class="timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <span class="timeline__dot" aria-hidden="true"></span>
             <article class="timeline__card">
               <header class="timeline__header">
@@ -293,7 +308,7 @@
             </article>
           </li>
 
-          <li class="timeline__item">
+          <li class="timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <span class="timeline__dot" aria-hidden="true"></span>
             <article class="timeline__card">
               <header class="timeline__header">
@@ -311,7 +326,7 @@
             </article>
           </li>
 
-          <li class="timeline__item">
+          <li class="timeline__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <span class="timeline__dot" aria-hidden="true"></span>
             <article class="timeline__card">
               <header class="timeline__header">
@@ -338,26 +353,26 @@
     ============================================================ -->
     <section id="education" class="section section--alt" aria-labelledby="education-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="600">
           <span class="section-eyebrow">Pendidikan</span>
           <h2 id="education-title" class="section-title">Latar Belakang Akademik</h2>
           <div class="section-divider"></div>
         </div>
 
         <ul class="education__grid">
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
             <h3 class="education__degree">S1 Ilmu Komputer</h3>
             <p class="education__school">Universitas Indonesia</p>
             <p class="education__year">2017 – 2021 &nbsp;·&nbsp; IPK 3.72 / 4.00</p>
           </li>
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-certificate"></i></span>
             <h3 class="education__degree">AWS Certified Developer – Associate</h3>
             <p class="education__school">Amazon Web Services</p>
             <p class="education__year">2023 &nbsp;·&nbsp; Sertifikasi Aktif</p>
           </li>
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
             <h3 class="education__degree">Meta Frontend Developer Certificate</h3>
             <p class="education__school">Coursera / Meta</p>
@@ -372,32 +387,32 @@
     ============================================================ -->
     <section id="certificates" class="section" aria-labelledby="cert-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="600">
           <span class="section-eyebrow">Sertifikasi & Penghargaan</span>
           <h2 id="cert-title" class="section-title">Kompetensi yang Terverifikasi</h2>
           <div class="section-divider"></div>
         </div>
 
         <ul class="education__grid">
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-cloud"></i></span>
             <h3 class="education__degree">Google Cloud Digital Leader</h3>
             <p class="education__school">Google Cloud</p>
             <p class="education__year">2024 · Kredensial: #GCP-12345</p>
           </li>
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <span class="education__icon" aria-hidden="true"><i class="fa-brands fa-js"></i></span>
             <h3 class="education__degree">JavaScript Advanced (ES6+)</h3>
             <p class="education__school">Dicoding Indonesia</p>
             <p class="education__year">2023 · Sertifikasi Kelulusan</p>
           </li>
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <span class="education__icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
             <h3 class="education__degree">Penghargaan Relawan Terbaik</h3>
             <p class="education__school">Kementerian Sosial RI</p>
             <p class="education__year">2022 · Program Literasi Digital</p>
           </li>
-          <li class="education__card">
+          <li class="education__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
             <span class="education__icon" aria-hidden="true"><i class="fa-brands fa-figma"></i></span>
             <h3 class="education__degree">UI/UX Design with Figma</h3>
             <p class="education__school">BuildWith Angga</p>
@@ -412,7 +427,7 @@
     ============================================================ -->
     <section id="skills" class="section section--alt" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="600">
           <span class="section-eyebrow">Keahlian</span>
           <h2 id="skills-title" class="section-title">Tech Stack &amp; Kemampuan</h2>
           <div class="section-divider"></div>
@@ -420,7 +435,7 @@
 
         <div class="skills__layout">
           <div class="skills__bars">
-            <div class="skill-bar">
+            <div class="skill-bar" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
               <div class="skill-bar__header">
                 <span class="skill-bar__name">React / Next.js</span>
                 <span class="skill-bar__percent">92%</span>
@@ -430,7 +445,7 @@
                   aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bar" data-aos="fade-right" data-aos-duration="600" data-aos-delay="150">
               <div class="skill-bar__header">
                 <span class="skill-bar__name">TypeScript</span>
                 <span class="skill-bar__percent">85%</span>
@@ -440,7 +455,7 @@
                   aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bar" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
               <div class="skill-bar__header">
                 <span class="skill-bar__name">Node.js / Express</span>
                 <span class="skill-bar__percent">80%</span>
@@ -450,7 +465,7 @@
                   aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bar" data-aos="fade-right" data-aos-duration="600" data-aos-delay="250">
               <div class="skill-bar__header">
                 <span class="skill-bar__name">PostgreSQL / MongoDB</span>
                 <span class="skill-bar__percent">75%</span>
@@ -460,7 +475,7 @@
                   aria-valuemax="100"></div>
               </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bar" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
               <div class="skill-bar__header">
                 <span class="skill-bar__name">Docker / DevOps</span>
                 <span class="skill-bar__percent">68%</span>
@@ -472,7 +487,7 @@
             </div>
           </div>
 
-          <div class="skills__tags">
+          <div class="skills__tags" data-aos="fade-left" data-aos-duration="700">
             <div class="skills__tag-group">
               <h4 class="skills__tag-label">Frontend</h4>
               <ul class="skills__tag-list">
@@ -524,7 +539,7 @@
     ============================================================ -->
     <section id="projects" class="section" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="600">
           <span class="section-eyebrow">Proyek Mandiri</span>
           <h2 id="projects-title" class="section-title">Karya yang Pernah Dibangun</h2>
           <div class="section-divider"></div>
@@ -533,7 +548,7 @@
         </div>
 
         <ul class="projects__grid">
-          <li class="projects__card">
+          <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
             <h3 class="projects__title">TokoKu — E-commerce UMKM</h3>
             <p class="projects__desc">Platform e-commerce sederhana dengan fitur keranjang, pembayaran virtual, dan
@@ -543,14 +558,16 @@
                 class="tag-pill">Midtrans</span>
             </div>
             <div class="projects__links">
-              <a href="#" target="_blank" rel="noopener" class="projects__link"><i class="fa-brands fa-github"
-                  aria-hidden="true"></i> Source</a>
-              <a href="#" target="_blank" rel="noopener" class="projects__link projects__link--demo"><i
+              <a href="#" target="_blank" rel="noopener" class="projects__link" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="Lihat source code"><i class="fa-brands fa-github" aria-hidden="true"></i>
+                Source</a>
+              <a href="#" target="_blank" rel="noopener" class="projects__link projects__link--demo"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Lihat demo langsung"><i
                   class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
             </div>
           </li>
 
-          <li class="projects__card">
+          <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-notes-medical"></i></span>
             <h3 class="projects__title">HealthTrack — Aplikasi Kesehatan</h3>
             <p class="projects__desc">Aplikasi pencatatan tekanan darah dan gula darah dengan visualisasi grafik.
@@ -560,12 +577,13 @@
                 class="tag-pill">Chart.js</span>
             </div>
             <div class="projects__links">
-              <a href="#" target="_blank" rel="noopener" class="projects__link"><i class="fa-brands fa-github"
-                  aria-hidden="true"></i> Source</a>
+              <a href="#" target="_blank" rel="noopener" class="projects__link" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="Lihat source code"><i class="fa-brands fa-github" aria-hidden="true"></i>
+                Source</a>
             </div>
           </li>
 
-          <li class="projects__card">
+          <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-robot"></i></span>
             <h3 class="projects__title">ChatBot AI — Customer Service</h3>
             <p class="projects__desc">Chatbot berbasis NLP sederhana untuk menjawab pertanyaan umum pelanggan. Dibangun
@@ -574,14 +592,16 @@
               <span class="tag-pill">Python</span><span class="tag-pill">Flask</span><span class="tag-pill">NLTK</span>
             </div>
             <div class="projects__links">
-              <a href="#" target="_blank" rel="noopener" class="projects__link"><i class="fa-brands fa-github"
-                  aria-hidden="true"></i> Source</a>
-              <a href="#" target="_blank" rel="noopener" class="projects__link projects__link--demo"><i
+              <a href="#" target="_blank" rel="noopener" class="projects__link" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="Lihat source code"><i class="fa-brands fa-github" aria-hidden="true"></i>
+                Source</a>
+              <a href="#" target="_blank" rel="noopener" class="projects__link projects__link--demo"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Lihat demo langsung"><i
                   class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
             </div>
           </li>
 
-          <li class="projects__card">
+          <li class="projects__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
             <span class="projects__icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
             <h3 class="projects__title">Design System UI Kit</h3>
             <p class="projects__desc">Koleksi komponen UI (button, form, modal, card) yang reusable dan dokumentasi
@@ -591,8 +611,9 @@
                 Components</span>
             </div>
             <div class="projects__links">
-              <a href="#" target="_blank" rel="noopener" class="projects__link"><i class="fa-brands fa-github"
-                  aria-hidden="true"></i> Source</a>
+              <a href="#" target="_blank" rel="noopener" class="projects__link" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="Lihat source code"><i class="fa-brands fa-github" aria-hidden="true"></i>
+                Source</a>
             </div>
           </li>
         </ul>
@@ -605,7 +626,7 @@
     <section id="contact" class="section contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="contact__grid">
-          <div class="contact__intro">
+          <div class="contact__intro" data-aos="fade-right" data-aos-duration="700">
             <span class="section-eyebrow">Kontak</span>
             <h2 id="contact-title" class="section-title">Mari Berkolaborasi</h2>
             <div class="section-divider"></div>
@@ -620,34 +641,39 @@
             <span class="contact__social-label">Temukan Saya Di</span>
             <div class="contact__socials">
               <a href="https://www.github.com/Bule2365" target="_blank" rel="noopener noreferrer"
-                class="contact__social-btn" aria-label="GitHub — buka di tab baru">
+                class="contact__social-btn" aria-label="GitHub — buka di tab baru" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="GitHub">
                 <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
               </a>
               <a href="https://www.linkedin.com/in/leaddaf/" target="_blank" rel="noopener noreferrer"
-                class="contact__social-btn" aria-label="LinkedIn — buka di tab baru">
+                class="contact__social-btn" aria-label="LinkedIn — buka di tab baru" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="LinkedIn">
                 <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
               </a>
             </div>
           </div>
 
-          <ul class="contact__items">
-            <li><a href="mailto:andi@email.com" class="contact__item">
+          <ul class="contact__items" data-aos="fade-left" data-aos-duration="700">
+            <li><a href="mailto:andi@email.com" class="contact__item" data-bs-toggle="tooltip" data-bs-placement="left"
+                title="Kirim email">
                 <span class="contact__item-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
                 <span class="contact__item-text"><span class="contact__item-label">Email</span><span
                     class="contact__item-value">andi@email.com</span></span>
               </a></li>
-            <li><a href="tel:+6281234567890" class="contact__item">
+            <li><a href="tel:+6281234567890" class="contact__item" data-bs-toggle="tooltip" data-bs-placement="left"
+                title="Telepon / WhatsApp">
                 <span class="contact__item-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
                 <span class="contact__item-text"><span class="contact__item-label">Telepon / WhatsApp</span><span
                     class="contact__item-value">+62 812-3456-7890</span></span>
               </a></li>
             <li><a href="https://www.linkedin.com/in/leaddaf/" target="_blank" rel="noopener noreferrer"
-                class="contact__item">
+                class="contact__item" data-bs-toggle="tooltip" data-bs-placement="left" title="Buka LinkedIn">
                 <span class="contact__item-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
                 <span class="contact__item-text"><span class="contact__item-label">LinkedIn</span><span
                     class="contact__item-value">linkedin.com/in/leaddaf/</span></span>
               </a></li>
-            <li><a href="https://github.com/Bule2365" target="_blank" rel="noopener noreferrer" class="contact__item">
+            <li><a href="https://github.com/Bule2365" target="_blank" rel="noopener noreferrer" class="contact__item"
+                data-bs-toggle="tooltip" data-bs-placement="left" title="Buka GitHub">
                 <span class="contact__item-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
                 <span class="contact__item-text"><span class="contact__item-label">GitHub</span><span
                     class="contact__item-value">github.com/Bule2365</span></span>
@@ -662,9 +688,27 @@
   <!-- ============================================================
        BACK TO TOP
   ============================================================ -->
-  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas" data-bs-toggle="tooltip"
+    data-bs-placement="left" title="Kembali ke atas">
     <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </button>
+
+  <!-- ============================================================
+       TOAST NOTIFICATION (Bootstrap)
+  ============================================================ -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <i class="fa-solid fa-circle-check text-success me-2"></i>
+        <strong class="me-auto">Portfolio Daffa Aria</strong>
+        <small>baru saja</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        👋 Selamat datang di portfolio saya. Nikmati pengalaman browsing yang modern!
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        FOOTER
@@ -676,7 +720,19 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- ============================================================
+       CDN Libraries (JavaScript)
+  ============================================================ -->
+  <!-- Bootstrap 5 (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- JavaScript Utama -->
   <script src="scripts.js" defer></script>
 </body>
 

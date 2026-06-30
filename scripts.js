@@ -67,7 +67,7 @@
     }
 
     // ============================================================
-    //  4. SCROLL SPY — Active nav link
+    //  4. SCROLL SPY
     // ============================================================
     const updateActiveLink = () => {
         const scrollY = window.scrollY + 100;
@@ -109,7 +109,7 @@
     window.addEventListener('load', updateActiveLink);
 
     // ============================================================
-    //  5. SMOOTH SCROLL FOR NAV LINKS
+    //  5. SMOOTH SCROLL
     // ============================================================
     navLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
@@ -127,7 +127,7 @@
     });
 
     // ============================================================
-    //  6. KEYBOARD TRAP (mobile menu)
+    //  6. KEYBOARD TRAP
     // ============================================================
     if (navbarToggle && navbarMenu) {
         navbarMenu.addEventListener('keydown', (e) => {
@@ -171,67 +171,7 @@
     }
 
     // ============================================================
-    //  8. SCROLL REVEAL
-    // ============================================================
-    (function initReveal() {
-        const revealElements = document.querySelectorAll(
-            '.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade'
-        );
-
-        if (revealElements.length === 0) return;
-
-        if (!('IntersectionObserver' in window)) {
-            revealElements.forEach((el) => {
-                el.classList.add('visible');
-                el.classList.remove('hidden');
-            });
-            return;
-        }
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    const el = entry.target;
-                    if (entry.isIntersecting) {
-                        el.classList.remove('hidden');
-                        el.classList.add('visible');
-                    }
-                });
-            },
-            {
-                root: null,
-                rootMargin: '0px 0px -30px 0px',
-                threshold: 0.08,
-            }
-        );
-
-        revealElements.forEach((el) => {
-            el.classList.add('hidden');
-            el.classList.remove('visible');
-            observer.observe(el);
-        });
-
-        // Show elements already in viewport on load
-        setTimeout(() => {
-            revealElements.forEach((el) => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    el.classList.remove('hidden');
-                    el.classList.add('visible');
-                }
-            });
-        }, 200);
-
-        // Hero always visible
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.classList.remove('hidden');
-            hero.classList.add('visible');
-        }
-    })();
-
-    // ============================================================
-    //  9. DARK MODE TOGGLE
+    //  8. DARK MODE TOGGLE
     // ============================================================
     (function darkMode() {
         const toggle = document.getElementById('themeToggle');
@@ -258,7 +198,7 @@
     })();
 
     // ============================================================
-    //  10. SCROLL PROGRESS BAR
+    //  9. SCROLL PROGRESS
     // ============================================================
     const updateProgress = () => {
         const scrollY = window.scrollY;
@@ -274,7 +214,7 @@
     window.addEventListener('resize', updateProgress, { passive: true });
 
     // ============================================================
-    //  11. BACK TO TOP BUTTON
+    //  10. BACK TO TOP
     // ============================================================
     const toggleBackToTop = () => {
         if (backToTop) {
@@ -291,7 +231,104 @@
     }
 
     // ============================================================
-    //  12. INITIALIZATION
+    //  11. AOS (Animate On Scroll) — Inisialisasi
+    // ============================================================
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            delay: 50,
+        });
+    }
+
+    // ============================================================
+    //  12. Typed.js — Efek mengetik di hero
+    // ============================================================
+    if (typeof Typed !== 'undefined') {
+        const typedElement = document.getElementById('typed-text');
+        if (typedElement) {
+            new Typed('#typed-text', {
+                strings: [
+                    'Full-Stack Developer',
+                    'Data Analyst',
+                    'React Enthusiast',
+                    'Problem Solver',
+                ],
+                typeSpeed: 60,
+                backSpeed: 40,
+                backDelay: 1800,
+                startDelay: 600,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|',
+                autoInsertCss: false,
+            });
+        }
+    }
+
+    // ============================================================
+    //  13. Bootstrap Tooltip
+    // ============================================================
+    if (typeof bootstrap !== 'undefined') {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map((el) => new bootstrap.Tooltip(el));
+    }
+
+    // ============================================================
+    //  14. Toast Notification (Bootstrap)
+    // ============================================================
+    if (typeof bootstrap !== 'undefined') {
+        const toastEl = document.getElementById('liveToast');
+        if (toastEl) {
+            const toast = new bootstrap.Toast(toastEl, {
+                delay: 5000,
+                animation: true,
+            });
+            // Tampilkan toast setelah 1.5 detik
+            setTimeout(() => {
+                toast.show();
+            }, 1500);
+        }
+    }
+
+    // ============================================================
+    //  15. Counter Animation (Pengalaman di About Badge)
+    // ============================================================
+    (function counterAnimation() {
+        const counterEl = document.getElementById('experienceCounter');
+        if (!counterEl) return;
+
+        const target = 3;
+        let current = 0;
+        const increment = target / 30;
+        const duration = 800;
+        const stepTime = Math.floor(duration / 30);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && current === 0) {
+                        const interval = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(interval);
+                            }
+                            counterEl.textContent = Math.floor(current);
+                        }, stepTime);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        observer.observe(counterEl);
+    })();
+
+    // ============================================================
+    //  16. INITIALIZATION
     // ============================================================
     updateProgress();
     toggleBackToTop();

@@ -1389,6 +1389,87 @@ h6 {
 }
 
 /* ============================================================
+   TAMBAHAN UNTUK FITUR MODERN
+   ============================================================ */
+
+/* --- AOS Override (agar sesuai dengan desain) --- */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* --- Tooltip Bootstrap --- */
+.tooltip {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+}
+
+.tooltip-inner {
+  background: var(--text-primary);
+  color: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.8rem;
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--text-primary);
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: var(--text-primary);
+}
+
+/* --- Toast Notification --- */
+.toast {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(8px);
+  background: var(--color-surface);
+  color: var(--text-primary);
+}
+
+.toast-header {
+  background: transparent;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.toast-header .btn-close {
+  filter: invert(0.5);
+}
+
+body.dark-mode .toast-header .btn-close {
+  filter: invert(1);
+}
+
+.toast-body {
+  color: var(--text-secondary);
+}
+
+/* --- Hover effect untuk card --- */
+.projects__card,
+.education__card,
+.timeline__card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Typed.js cursor --- */
+.typed-cursor {
+  font-weight: 300;
+  font-size: inherit;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* ============================================================
    20. REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
