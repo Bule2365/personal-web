@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daffa Aria — Full-Stack Developer &amp; Data Analyst</title>
+    <meta
+      name="description"
+      content="Portfolio CV Daffa Aria, Full-Stack Developer berbasis di Jakarta. Spesialis React, Node.js, dan desain antarmuka intuitif."
+    />
+    <meta name="theme-color" content="#0b1826" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Daffa Aria — Full-Stack Developer &amp; Data Analyst"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio CV Daffa Aria, Full-Stack Developer &amp; Data Analyst berbasis di Jakarta."
+    />
+    <meta property="og:url" content="https://daffaaria.dev" />
+    <meta property="og:site_name" content="Daffa Aria" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Daffa Aria — Full-Stack Developer &amp; Data Analyst"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio CV Daffa Aria, Full-Stack Developer &amp; Data Analyst berbasis di Jakarta."
+    />
+
+    <!-- Preconnect untuk Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 (hanya icon yang diperlukan) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ============================================================
+   HEADER & NAVIGASI
+============================================================ -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <nav class="navbar" role="navigation" aria-label="Menu utama">
+          <a href="#hero" class="navbar-brand reveal" aria-label="Beranda">
+            DA<span class="brand-dot">.</span>
+          </a>
+
+          <button
+            class="navbar-toggle"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="navbar-menu"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+          <ul id="navbar-menu" class="navbar-menu" role="menubar">
+            <li role="none">
+              <a
+                href="#about"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-1"
+                >Tentang</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#experience"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-2"
+                >Pengalaman</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#organization"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-3"
+                >Organisasi</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#education"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-4"
+                >Pendidikan</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#certificates"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-5"
+                >Sertifikat</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#skills"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-5"
+                >Keahlian</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#projects"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-5"
+                >Proyek</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#contact"
+                role="menuitem"
+                class="nav-link reveal reveal-delay-5"
+                >Kontak</a
+              >
+            </li>
+            <li role="none" style="margin-left: 0.5rem">
+              <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+              >
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============================================================
+   MAIN — konten utama
+============================================================ -->
+    <main id="main" role="main">
+      <!-- ============================================================
+     HERO SECTION (background diam, elemen kecil yang bergerak)
+  ============================================================ -->
+      <section id="hero" class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__label reveal" aria-hidden="true">
+            <span class="hero__label-line"></span>
+            Tersedia untuk peluang baru
+          </div>
+
+          <h1 id="hero-title" class="hero__name reveal reveal-delay-1">
+            Daffa Aria
+          </h1>
+
+          <p class="hero__title reveal reveal-delay-2">
+            <strong>Full-Stack Developer</strong>
+          </p>
+
+          <p class="hero__bio reveal reveal-delay-3">
+            Saya menggabungkan pengembangan backend dengan analisis data untuk
+            menciptakan solusi yang efisien dan berbasis data. Berpengalaman
+            dalam membangun API, mengelola database, serta menyajikan insight
+            yang mendukung kebutuhan bisnis.
+          </p>
+
+          <div class="hero__actions reveal reveal-delay-4">
+            <a href="#contact" class="btn btn--primary">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Hubungi Saya
+            </a>
+            <a href="#experience" class="btn btn--outline">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              Lihat Pengalaman
+            </a>
+          </div>
+
+          <div class="hero__socials reveal reveal-delay-5">
+            <a
+              href="https://github.com/Bule2365"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="GitHub — buka di tab baru"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/leaddaf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="LinkedIn — buka di tab baru"
+            >
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a
+              href="mailto:ariadaffa127@email.com"
+              class="social-link"
+              aria-label="Kirim email ke Daffa Aria"
+            >
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         TENTANG SAYA
+      ============================================================ -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about__grid">
+            <!-- Avatar -->
+            <div class="about__avatar-wrap">
+              <div class="about__avatar reveal-left">
+                <img
+                  src="images/avatar.jpg"
+                  alt="Foto Daffa Aria"
+                  width="200"
+                  height="200"
+                />
+              </div>
+              <div class="about__badge reveal-right">
+                <p class="about__badge-text">Full-Stack Developer</p>
+                <p class="about__badge-text">1 Tahun Pengalaman</p>
+              </div>
+            </div>
+
+            <!-- Teks -->
+            <div class="about__content reveal reveal-right">
+              <div class="section-header">
+                <div class="section-eyebrow">Tentang Saya</div>
+                <h2 id="about-title" class="section-title">
+                  Developer yang senang<br />memecahkan masalah nyata
+                </h2>
+                <div class="section-divider"></div>
+              </div>
+
+              <p>
+                Halo! Saya Daffa Aria, seorang Full-Stack Developer berbasis di
+                Jakarta dengan pengalaman lebih dari 3 tahun membangun aplikasi
+                web skala produksi. Saya percaya bahwa kode yang baik adalah
+                kode yang mudah dibaca dan dirawat oleh siapapun.
+              </p>
+              <p>
+                Di luar pekerjaan, saya aktif berkontribusi di komunitas
+                open-source lokal dan senang mengeksplorasi teknologi baru —
+                terutama di bidang web performance dan aksesibilitas.
+              </p>
+
+              <dl class="about__details">
+                <div class="about__detail">
+                  <dt class="about__detail-key">Lokasi</dt>
+                  <dd class="about__detail-value">Jakarta, Indonesia</dd>
+                </div>
+                <div class="about__detail">
+                  <dt class="about__detail-key">Status</dt>
+                  <dd class="about__detail-value">Terbuka untuk Peluang</dd>
+                </div>
+                <div class="about__detail">
+                  <dt class="about__detail-key">Email</dt>
+                  <dd class="about__detail-value">ariadaffa127@email.com</dd>
+                </div>
+                <div class="about__detail">
+                  <dt class="about__detail-key">Bahasa</dt>
+                  <dd class="about__detail-value">Indonesia, Inggris</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         PENGALAMAN KERJA
+      ============================================================ -->
+      <section
+        id="experience"
+        class="section section--alt"
+        aria-labelledby="experience-title"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-eyebrow">Pengalaman Kerja</div>
+            <h2 id="experience-title" class="section-title">
+              Karier Profesional
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <ol class="timeline">
+            <!-- Experience 1 -->
+            <li class="timeline__item reveal reveal-delay-1">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div class="timeline__company">PT Teknologi Nusantara</div>
+                  <time class="timeline__period" datetime="2023-01"
+                    >2023 – Sekarang</time
+                  >
+                </header>
+                <h3 class="timeline__role">Senior Frontend Developer</h3>
+                <p class="timeline__desc">
+                  Memimpin tim frontend 4 orang dalam pengembangan dashboard
+                  analitik B2B berbasis React. Meningkatkan performa halaman
+                  utama hingga 60% melalui code-splitting dan lazy loading.
+                  Menerapkan design system yang digunakan lintas 3 produk.
+                </p>
+                <ul
+                  class="timeline__tags"
+                  aria-label="Teknologi yang digunakan"
+                >
+                  <li class="tag">React</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">Redux</li>
+                  <li class="tag">Figma</li>
+                  <li class="tag">AWS</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Experience 2 -->
+            <li class="timeline__item reveal reveal-delay-2">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div class="timeline__company">Startup Kreatif Indonesia</div>
+                  <time class="timeline__period" datetime="2021-01"
+                    >2021 – 2023</time
+                  >
+                </header>
+                <h3 class="timeline__role">Full-Stack Developer</h3>
+                <p class="timeline__desc">
+                  Membangun platform e-commerce dari nol menggunakan Next.js dan
+                  Express.js. Mengintegrasikan payment gateway (Midtrans) dan
+                  notifikasi real-time via WebSocket. Mengelola deployment di
+                  GCP dengan Docker dan CI/CD pipeline.
+                </p>
+                <ul
+                  class="timeline__tags"
+                  aria-label="Teknologi yang digunakan"
+                >
+                  <li class="tag">Next.js</li>
+                  <li class="tag">Node.js</li>
+                  <li class="tag">PostgreSQL</li>
+                  <li class="tag">Docker</li>
+                  <li class="tag">GCP</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Experience 3 -->
+            <li class="timeline__item reveal reveal-delay-3">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div class="timeline__company">Freelance / Kontrak</div>
+                  <time class="timeline__period" datetime="2020-01"
+                    >2020 – 2021</time
+                  >
+                </header>
+                <h3 class="timeline__role">Web Developer</h3>
+                <p class="timeline__desc">
+                  Mengerjakan berbagai proyek web untuk klien UMKM lokal —
+                  landing pages, profil perusahaan, dan toko online sederhana.
+                  Mengasah kemampuan komunikasi klien dan manajemen proyek
+                  mandiri.
+                </p>
+                <ul
+                  class="timeline__tags"
+                  aria-label="Teknologi yang digunakan"
+                >
+                  <li class="tag">HTML/CSS</li>
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">WordPress</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+   PENGALAMAN ORGANISASI & RELAWAN
+   ============================================================ -->
+      <section
+        id="organization"
+        class="section section--alt"
+        aria-labelledby="org-title"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-eyebrow">Organisasi & Relawan</div>
+            <h2 id="org-title" class="section-title">
+              Kontribusi Sosial & Kepemimpinan
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <ol class="timeline">
+            <!-- Organisasi 1 -->
+            <li class="timeline__item reveal reveal-delay-1">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div class="timeline__company">
+                    Himpunan Mahasiswa Teknik Informatika
+                  </div>
+                  <time class="timeline__period" datetime="2020-01"
+                    >2020 – 2021</time
+                  >
+                </header>
+                <h3 class="timeline__role">Ketua Bidang Pengembangan SDM</h3>
+                <p class="timeline__desc">
+                  Memimpin divisi yang bertanggung jawab atas pelatihan internal
+                  dan workshop publik. Menginisiasi program "Coding Bootcamp for
+                  Beginners" yang diikuti oleh 120+ peserta dari berbagai
+                  jurusan.
+                </p>
+                <ul class="timeline__tags" aria-label="Bidang yang dikelola">
+                  <li class="tag">Manajemen Tim</li>
+                  <li class="tag">Pelatihan</li>
+                  <li class="tag">Public Speaking</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Organisasi 2 -->
+            <li class="timeline__item reveal reveal-delay-2">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div class="timeline__company">
+                    Relawan Teknologi untuk Desa
+                  </div>
+                  <time class="timeline__period" datetime="2021-06"
+                    >2021 – 2022</time
+                  >
+                </header>
+                <h3 class="timeline__role">Koordinator Wilayah</h3>
+                <p class="timeline__desc">
+                  Mengkoordinasikan 15 relawan untuk mengajarkan literasi
+                  digital dan membuatkan website sederhana untuk 5 desa binaan
+                  di daerah Jawa Barat. Berhasil meningkatkan akses informasi
+                  bagi UMKM lokal melalui platform digital.
+                </p>
+                <ul class="timeline__tags" aria-label="Bidang yang dikelola">
+                  <li class="tag">Koordinator Lapangan</li>
+                  <li class="tag">Literasi Digital</li>
+                  <li class="tag">Pengabdian Masyarakat</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Organisasi 3 -->
+            <li class="timeline__item reveal reveal-delay-3">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <article class="timeline__card">
+                <header class="timeline__header">
+                  <div class="timeline__company">
+                    Google Developer Student Clubs (GDSC)
+                  </div>
+                  <time class="timeline__period" datetime="2022-01"
+                    >2022 – 2023</time
+                  >
+                </header>
+                <h3 class="timeline__role">Core Team & Mentor</h3>
+                <p class="timeline__desc">
+                  Menjadi fasilitator workshop Android & Web Development untuk
+                  mahasiswa. Membantu menyelenggarakan "Solution Challenge" yang
+                  menghasilkan 10+ prototipe aplikasi dampak sosial dari
+                  peserta.
+                </p>
+                <ul class="timeline__tags" aria-label="Bidang yang dikelola">
+                  <li class="tag">Mentoring</li>
+                  <li class="tag">Flutter</li>
+                  <li class="tag">Firebase</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         PENDIDIKAN
+      ============================================================ -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-eyebrow">Pendidikan</div>
+            <h2 id="education-title" class="section-title">
+              Latar Belakang Akademik
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <ul class="education__grid">
+            <li class="education__card reveal reveal-delay-1">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="education__degree">S1 Ilmu Komputer</h3>
+              <p class="education__school">Universitas Indonesia</p>
+              <p class="education__year">
+                2017 – 2021 &nbsp;·&nbsp; IPK 3.72 / 4.00
+              </p>
+            </li>
+
+            <li class="education__card reveal reveal-delay-2">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="education__degree">
+                AWS Certified Developer – Associate
+              </h3>
+              <p class="education__school">Amazon Web Services</p>
+              <p class="education__year">
+                2023 &nbsp;·&nbsp; Sertifikasi Aktif
+              </p>
+            </li>
+
+            <li class="education__card reveal reveal-delay-3">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3 class="education__degree">
+                Meta Frontend Developer Certificate
+              </h3>
+              <p class="education__school">Coursera / Meta</p>
+              <p class="education__year">
+                2022 &nbsp;·&nbsp; 6 Kursus Diselesaikan
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================
+   SERTIFIKASI & PENGHARGAAN
+   ============================================================ -->
+      <section id="certificates" class="section" aria-labelledby="cert-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-eyebrow">Sertifikasi & Penghargaan</div>
+            <h2 id="cert-title" class="section-title">
+              Kompetensi yang Terverifikasi
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <ul class="education__grid">
+            <!-- Sertifikat 1 -->
+            <li class="education__card reveal reveal-delay-1">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+              <h3 class="education__degree">Google Cloud Digital Leader</h3>
+              <p class="education__school">Google Cloud</p>
+              <p class="education__year">2024 · Kredensial: #GCP-12345</p>
+            </li>
+
+            <!-- Sertifikat 2 -->
+            <li class="education__card reveal reveal-delay-2">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h3 class="education__degree">JavaScript Advanced (ES6+)</h3>
+              <p class="education__school">Dicoding Indonesia</p>
+              <p class="education__year">2023 · Sertifikasi Kelulusan</p>
+            </li>
+
+            <!-- Sertifikat 3 -->
+            <li class="education__card reveal reveal-delay-3">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="education__degree">Penghargaan Relawan Terbaik</h3>
+              <p class="education__school">Kementerian Sosial RI</p>
+              <p class="education__year">2022 · Program Literasi Digital</p>
+            </li>
+
+            <!-- Sertifikat 4 (tambahan) -->
+            <li class="education__card reveal reveal-delay-4">
+              <div class="education__icon" aria-hidden="true">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <h3 class="education__degree">UI/UX Design with Figma</h3>
+              <p class="education__school">BuildWith Angga</p>
+              <p class="education__year">2021 · 40 Jam Pelatihan</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         SKILL & KEAHLIAN
+      ============================================================ -->
+      <section
+        id="skills"
+        class="section section--alt"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-eyebrow">Keahlian</div>
+            <h2 id="skills-title" class="section-title">
+              Tech Stack &amp; Kemampuan
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="skills__layout">
+            <!-- Progress bars -->
+            <div class="skills__bars">
+              <div class="skill-bar reveal reveal-delay-1">
+                <div class="skill-bar__header">
+                  <span class="skill-bar__name">React / Next.js</span>
+                  <span class="skill-bar__percent">92%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div
+                    class="skill-bar__fill"
+                    style="width: 92%"
+                    role="progressbar"
+                    aria-valuenow="92"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar reveal reveal-delay-2">
+                <div class="skill-bar__header">
+                  <span class="skill-bar__name">TypeScript</span>
+                  <span class="skill-bar__percent">85%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div
+                    class="skill-bar__fill"
+                    style="width: 85%"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar reveal reveal-delay-3">
+                <div class="skill-bar__header">
+                  <span class="skill-bar__name">Node.js / Express</span>
+                  <span class="skill-bar__percent">80%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div
+                    class="skill-bar__fill"
+                    style="width: 80%"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar reveal reveal-delay-4">
+                <div class="skill-bar__header">
+                  <span class="skill-bar__name">PostgreSQL / MongoDB</span>
+                  <span class="skill-bar__percent">75%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div
+                    class="skill-bar__fill"
+                    style="width: 75%"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar reveal reveal-delay-5">
+                <div class="skill-bar__header">
+                  <span class="skill-bar__name">Docker / DevOps</span>
+                  <span class="skill-bar__percent">68%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div
+                    class="skill-bar__fill"
+                    style="width: 68%"
+                    role="progressbar"
+                    aria-valuenow="68"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags by category -->
+            <div class="skills__tags reveal">
+              <div class="skills__tag-group">
+                <h4 class="skills__tag-label">Frontend</h4>
+                <ul class="skills__tag-list">
+                  <li class="tag-pill">HTML5</li>
+                  <li class="tag-pill">CSS3 / Tailwind</li>
+                  <li class="tag-pill">Vue.js</li>
+                  <li class="tag-pill">Redux</li>
+                  <li class="tag-pill">React Query</li>
+                  <li class="tag-pill">Framer Motion</li>
+                </ul>
+              </div>
+
+              <div class="skills__tag-group">
+                <h4 class="skills__tag-label">Backend &amp; Database</h4>
+                <ul class="skills__tag-list">
+                  <li class="tag-pill">REST API</li>
+                  <li class="tag-pill">GraphQL</li>
+                  <li class="tag-pill">Redis</li>
+                  <li class="tag-pill">Prisma ORM</li>
+                  <li class="tag-pill">Firebase</li>
+                </ul>
+              </div>
+
+              <div class="skills__tag-group">
+                <h4 class="skills__tag-label">Tools &amp; Platform</h4>
+                <ul class="skills__tag-list">
+                  <li class="tag-pill">Git / GitHub</li>
+                  <li class="tag-pill">CI/CD</li>
+                  <li class="tag-pill">AWS</li>
+                  <li class="tag-pill">Vercel</li>
+                  <li class="tag-pill">Figma</li>
+                  <li class="tag-pill">Jira</li>
+                </ul>
+              </div>
+
+              <div class="skills__tag-group">
+                <h4 class="skills__tag-label">Soft Skills</h4>
+                <ul class="skills__tag-list">
+                  <li class="tag-pill">Agile / Scrum</li>
+                  <li class="tag-pill">Technical Writing</li>
+                  <li class="tag-pill">Code Review</li>
+                  <li class="tag-pill">Mentoring</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+   PROYEK MANDIRI / PORTFOLIO
+   ============================================================ -->
+      <section
+        id="projects"
+        class="section section--alt"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-eyebrow">Proyek Mandiri</div>
+            <h2 id="projects-title" class="section-title">
+              Karya yang Pernah Dibangun
+            </h2>
+            <div class="section-divider"></div>
+            <p
+              style="
+                color: var(--color-text-secondary);
+                margin-top: var(--space-md);
+                max-width: 600px;
+              "
+            >
+              Beberapa proyek pribadi dan kolaborasi open-source yang
+              menunjukkan kemampuan teknis saya.
+            </p>
+          </div>
+
+          <ul class="projects__grid">
+            <!-- Proyek 1 -->
+            <li class="projects__card reveal reveal-scale">
+              <div class="projects__icon" aria-hidden="true">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <h3 class="projects__title">TokoKu — E-commerce UMKM</h3>
+              <p class="projects__desc">
+                Platform e-commerce sederhana dengan fitur keranjang, pembayaran
+                virtual, dan dashboard penjual. Dibangun dengan Next.js,
+                Tailwind CSS, dan Midtrans.
+              </p>
+              <div class="projects__tags">
+                <span class="tag-pill">Next.js</span>
+                <span class="tag-pill">Tailwind</span>
+                <span class="tag-pill">Midtrans</span>
+              </div>
+              <div class="projects__links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="projects__link"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+                  Code
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="projects__link projects__link--demo"
+                >
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i>
+                  Live Demo
+                </a>
+              </div>
+            </li>
+
+            <!-- Proyek 2 -->
+            <li class="projects__card reveal reveal-scale reveal-delay-1">
+              <div class="projects__icon" aria-hidden="true">
+                <i class="fa-solid fa-notes-medical"></i>
+              </div>
+              <h3 class="projects__title">HealthTrack — Aplikasi Kesehatan</h3>
+              <p class="projects__desc">
+                Aplikasi pencatatan tekanan darah dan gula darah dengan
+                visualisasi grafik. Menggunakan React Native (Expo) dan Firebase
+                Realtime Database.
+              </p>
+              <div class="projects__tags">
+                <span class="tag-pill">React Native</span>
+                <span class="tag-pill">Firebase</span>
+                <span class="tag-pill">Chart.js</span>
+              </div>
+              <div class="projects__links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="projects__link"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+                  Code
+                </a>
+              </div>
+            </li>
+
+            <!-- Proyek 3 -->
+            <li class="projects__card reveal reveal-scale reveal-delay-2">
+              <div class="projects__icon" aria-hidden="true">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h3 class="projects__title">ChatBot AI — Customer Service</h3>
+              <p class="projects__desc">
+                Chatbot berbasis NLP sederhana untuk menjawab pertanyaan umum
+                pelanggan. Dibangun dengan Python (Flask) untuk backend dan
+                vanilla JavaScript untuk frontend.
+              </p>
+              <div class="projects__tags">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Flask</span>
+                <span class="tag-pill">NLTK</span>
+              </div>
+              <div class="projects__links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="projects__link"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+                  Code
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="projects__link projects__link--demo"
+                >
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i>
+                  Live Demo
+                </a>
+              </div>
+            </li>
+
+            <!-- Proyek 4 -->
+            <li class="projects__card reveal reveal-scale reveal-delay-3">
+              <div class="projects__icon" aria-hidden="true">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h3 class="projects__title">Design System UI Kit</h3>
+              <p class="projects__desc">
+                Koleksi komponen UI (button, form, modal, card) yang reusable
+                dan dokumentasi interaktif menggunakan Storybook dan Styled
+                Components.
+              </p>
+              <div class="projects__tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">Storybook</span>
+                <span class="tag-pill">Styled Components</span>
+              </div>
+              <div class="projects__links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="projects__link"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+                  Code
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         KONTAK
+      ============================================================ -->
+      <section
+        id="contact"
+        class="section contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="contact__grid">
+            <!-- Kolom kiri: info & sosial -->
+            <div class="contact__intro reveal">
+              <div class="section-eyebrow">Kontak</div>
+              <h2 id="contact-title" class="section-title">
+                Mari Berkolaborasi
+              </h2>
+              <div class="section-divider"></div>
+              <p class="contact__tagline">
+                Punya proyek menarik, tawaran pekerjaan, atau sekadar ingin
+                menyapa? Kotak masuk saya selalu terbuka untuk percakapan yang
+                bermakna.
+              </p>
+
+              <div class="contact__badge">
+                <span class="contact__badge-dot" aria-hidden="true"></span>
+                Tersedia untuk Freelance &amp; Full-time
+              </div>
+
+              <div class="contact__social-label">Temukan Saya Di</div>
+              <div class="contact__socials">
+                <a
+                  href="https://www.github.com/Bule2365"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact__social-btn"
+                  aria-label="GitHub — buka di tab baru"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/leaddaf/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact__social-btn"
+                  aria-label="LinkedIn — buka di tab baru"
+                >
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <!-- Kolom kanan: detail kontak -->
+            <ul class="contact__items reveal">
+              <li>
+                <a href="mailto:andi@email.com" class="contact__item">
+                  <span class="contact__item-icon" aria-hidden="true">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <span class="contact__item-text">
+                    <span class="contact__item-label">Email</span>
+                    <span class="contact__item-value">andi@email.com</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+6281234567890" class="contact__item">
+                  <span class="contact__item-icon" aria-hidden="true">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  <span class="contact__item-text">
+                    <span class="contact__item-label">Telepon / WhatsApp</span>
+                    <span class="contact__item-value">+62 812-3456-7890</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/leaddaf/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact__item"
+                >
+                  <span class="contact__item-icon" aria-hidden="true">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </span>
+                  <span class="contact__item-text">
+                    <span class="contact__item-label">LinkedIn</span>
+                    <span class="contact__item-value"
+                      >linkedin.com/in/leaddaf/</span
+                    >
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Bule2365"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact__item"
+                >
+                  <span class="contact__item-icon" aria-hidden="true">
+                    <i class="fa-brands fa-github"></i>
+                  </span>
+                  <span class="contact__item-text">
+                    <span class="contact__item-label">GitHub</span>
+                    <span class="contact__item-value">github.com/Bule2365</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+    ============================================================ -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>
+          &copy; <span id="footer-year">2026</span> Daffa Aria.
+          <span class="footer__separator" aria-hidden="true">·</span>
+          Dibangun dengan
+          <span class="footer__heart" aria-hidden="true">❤️</span>
+          dan banyak kopi.
+        </p>
+        <p class="footer__small">
+          <span class="footer__tech">React · Node.js · CSS Grid</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
