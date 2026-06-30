@@ -4,32 +4,33 @@
 
 /* --- CSS Variables (Light Theme default) --- */
 :root {
-  /* --- Base Colors (Light) --- */
-  --bg-body: #f6f8fa;
+  /* --- Base Colors (Light) — putih pudar & halus --- */
+  --bg-body: #fafafa;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
-  --bg-alt: #f0f2f5;
-  --bg-header: rgba(255, 255, 255, 0.82);
+  --bg-alt: #f5f5f5;
+  --bg-header: rgba(255, 255, 255, 0.85);
   --bg-hero: #ffffff;
   --bg-footer: #ffffff;
 
-  --text-primary: #1e293b;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #8a8a8a;
   --text-inverse: #ffffff;
 
-  --border-color: #e9edf2;
-  --border-light: #f1f3f6;
+  --border-color: #e8e8e8;
+  --border-light: #f0f0f0;
 
+  /* Aksen tetap biru tipis, hanya untuk teks/garis */
   --accent: #3b82f6;
   --accent-light: #60a5fa;
   --accent-dark: #2563eb;
-  --accent-bg: rgba(59, 130, 246, 0.08);
+  --accent-bg: rgba(59, 130, 246, 0.06);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 4px 20px rgba(59, 130, 246, 0.25);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 4px 20px rgba(59, 130, 246, 0.15);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -62,7 +63,7 @@ body.dark-mode {
   --accent: #60a5fa;
   --accent-light: #93bbfc;
   --accent-dark: #3b82f6;
-  --accent-bg: rgba(96, 165, 250, 0.1);
+  --accent-bg: rgba(96, 165, 250, 0.10);
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
@@ -160,7 +161,7 @@ h6 {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
@@ -324,7 +325,7 @@ h6 {
   width: 70%;
   height: 140%;
   background: radial-gradient(circle,
-      rgba(59, 130, 246, 0.08) 0%,
+      rgba(59, 130, 246, 0.04) 0%,
       transparent 70%);
   pointer-events: none;
 }
@@ -343,7 +344,7 @@ h6 {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
@@ -351,7 +352,7 @@ h6 {
   display: inline-block;
   width: 26px;
   height: 2px;
-  background: var(--accent-light);
+  background: var(--accent);
   border-radius: var(--radius-full);
 }
 
@@ -361,29 +362,26 @@ h6 {
   line-height: 1.04;
   letter-spacing: -0.04em;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg,
-      #ffffff 30%,
-      rgba(96, 165, 250, 0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
+  background: none;
+  -webkit-text-fill-color: var(--text-primary);
 }
 
 .hero__title {
   font-size: clamp(1.1rem, 2.25vw, 1.6rem);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .hero__title strong {
-  color: var(--accent-light);
+  color: var(--accent);
   font-weight: 600;
 }
 
 .hero__bio {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-secondary);
   max-width: 530px;
   line-height: 1.85;
   margin-bottom: 2.5rem;
@@ -423,13 +421,13 @@ h6 {
 
 .btn--outline {
   background: transparent;
-  color: rgba(255, 255, 255, 0.75);
-  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
 }
 
 .btn--outline:hover {
-  border-color: rgba(255, 255, 255, 0.55);
-  color: #fff;
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 
@@ -445,8 +443,8 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
   font-size: 1rem;
   transition: var(--transition);
 }
@@ -454,7 +452,7 @@ h6 {
 .social-link:hover {
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(59, 130, 246, 0.1);
+  background: var(--accent-bg);
 }
 
 /* ============================================================
@@ -476,11 +474,12 @@ h6 {
   max-width: 280px;
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--text-secondary);
   font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 800;
@@ -556,7 +555,7 @@ h6 {
   top: 0.5rem;
   bottom: 0.5rem;
   width: 2px;
-  background: linear-gradient(to bottom, var(--accent), var(--border-color));
+  background: var(--border-color);
   border-radius: var(--radius-full);
 }
 
@@ -613,7 +612,7 @@ h6 {
 .timeline__period {
   font-size: 0.7rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-inverse);
   background: var(--accent);
   padding: 0.2rem 0.8rem;
   border-radius: var(--radius-full);
@@ -642,9 +641,9 @@ h6 {
 .tag {
   font-size: 0.7rem;
   font-weight: 500;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  color: var(--text-secondary);
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
   padding: 0.25rem 0.8rem;
   border-radius: var(--radius-full);
 }
@@ -675,7 +674,7 @@ h6 {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  background: var(--accent);
 }
 
 .education__card:hover {
@@ -687,11 +686,11 @@ h6 {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background: var(--accent-bg);
+  background: var(--bg-alt);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--text-secondary);
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
@@ -707,7 +706,7 @@ h6 {
 .education__school {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--text-secondary);
   margin-bottom: 0.25rem;
 }
 
@@ -749,7 +748,7 @@ h6 {
 .skill-bar__percent {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--text-secondary);
 }
 
 .skill-bar__track {
@@ -762,7 +761,7 @@ h6 {
 .skill-bar__fill {
   height: 100%;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  background: var(--accent);
   transition: width 0.8s ease;
 }
 
@@ -795,7 +794,7 @@ h6 {
 .tag-pill {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   padding: 0.3rem 0.9rem;
@@ -837,7 +836,7 @@ h6 {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  background: var(--accent);
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -855,11 +854,11 @@ h6 {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background: var(--accent-bg);
+  background: var(--bg-alt);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--text-secondary);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -926,7 +925,7 @@ h6 {
 }
 
 .contact .section-eyebrow {
-  color: var(--accent);
+  color: var(--text-muted);
 }
 
 .contact .section-title {
@@ -958,9 +957,9 @@ h6 {
   gap: 0.5rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #059669;
-  background: rgba(5, 150, 105, 0.08);
-  border: 1px solid rgba(5, 150, 105, 0.15);
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   padding: 0.3rem 1rem;
   border-radius: var(--radius-full);
   margin-bottom: 2rem;
@@ -970,7 +969,7 @@ h6 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #059669;
+  background: var(--accent);
   animation: pulse-dot 2s ease infinite;
 }
 
@@ -1047,11 +1046,11 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  background: var(--accent-bg);
+  background: var(--bg-alt);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--text-secondary);
   font-size: 1rem;
   flex-shrink: 0;
 }
