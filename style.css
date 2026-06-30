@@ -1085,17 +1085,6 @@ h6 {
   color: var(--text-muted);
 }
 
-.site-footer .footer__heart {
-  color: #ef4444;
-}
-
-.site-footer .footer__small {
-  margin-top: 0.25rem;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  opacity: 0.6;
-}
-
 /* ============================================================
    SCROLL REVEAL
    ============================================================ */
