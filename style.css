@@ -346,7 +346,7 @@ h6 {
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.50;
+  opacity: 2;
   z-index: 0;
   transition: opacity var(--transition);
 }
@@ -690,7 +690,7 @@ body.dark-mode .hero__bg {
   gap: 1.25rem;
 }
 
-/* .education__card {
+.education__card {
   background: var(--color-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -698,7 +698,7 @@ body.dark-mode .hero__bg {
   position: relative;
   overflow: hidden;
   transition: all var(--transition);
-} */
+}
 
 .education__card::before {
   content: "";

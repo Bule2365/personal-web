@@ -299,7 +299,7 @@
         const counterEl = document.getElementById('experienceCounter');
         if (!counterEl) return;
 
-        const target = 3;
+        const target = 2;
         let current = 0;
         const increment = target / 30;
         const duration = 800;
