@@ -1,7 +1,7 @@
 /**
  * ============================================================
  *  scripts.js — Portfolio CV Daffa Aria
- *  Fungsi: navigasi, mobile menu, scroll spy, scroll reveal
+ *  Modern | Modular | Performant
  * ============================================================
  */
 
@@ -17,16 +17,18 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     const footerYear = document.getElementById('footer-year');
+    const backToTop = document.getElementById('backToTop');
+    const scrollProgress = document.getElementById('scrollProgress');
 
     // ============================================================
-    //  2. SET FOOTER YEAR
+    //  2. FOOTER YEAR
     // ============================================================
     if (footerYear) {
         footerYear.textContent = new Date().getFullYear();
     }
 
     // ============================================================
-    //  3. MOBILE MENU TOGGLE
+    //  3. MOBILE MENU
     // ============================================================
     if (navbarToggle && navbarMenu) {
         const toggleMenu = (open) => {
@@ -37,11 +39,9 @@
         };
 
         navbarToggle.addEventListener('click', () => {
-            const isOpen = navbarToggle.getAttribute('aria-expanded') === 'false';
-            toggleMenu(isOpen);
+            toggleMenu();
         });
 
-        // Tutup menu saat link diklik (mobile)
         navLinks.forEach((link) => {
             link.addEventListener('click', () => {
                 if (navbarToggle.getAttribute('aria-expanded') === 'true') {
@@ -50,17 +50,14 @@
             });
         });
 
-        // Tutup menu saat klik di luar
         document.addEventListener('click', (e) => {
             if (navbarToggle.getAttribute('aria-expanded') === 'true') {
-                const target = e.target;
-                if (!navbar.contains(target)) {
+                if (!navbar.contains(e.target)) {
                     toggleMenu(false);
                 }
             }
         });
 
-        // Tutup menu saat escape ditekan
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navbarToggle.getAttribute('aria-expanded') === 'true') {
                 toggleMenu(false);
@@ -70,41 +67,40 @@
     }
 
     // ============================================================
-    //  4. SCROLL SPY — aktifkan link nav sesuai section
+    //  4. SCROLL SPY — Active nav link
     // ============================================================
     const updateActiveLink = () => {
-        const scrollY = window.scrollY;
-        const offset = 120;
-
+        const scrollY = window.scrollY + 100;
         let activeId = null;
+
         sections.forEach((section) => {
-            const top = section.offsetTop - offset;
+            const top = section.offsetTop;
             const bottom = top + section.offsetHeight;
             if (scrollY >= top && scrollY < bottom) {
                 activeId = section.id;
             }
         });
 
+        if (!activeId && sections.length > 0) {
+            activeId = sections[0].id;
+        }
+
         navLinks.forEach((link) => {
             const href = link.getAttribute('href');
             const isActive = href === `#${activeId}`;
             link.classList.toggle('active', isActive);
-            if (isActive) {
-                link.setAttribute('aria-current', 'section');
-            } else {
-                link.removeAttribute('aria-current');
-            }
+            link.setAttribute('aria-current', isActive ? 'section' : '');
         });
     };
 
-    let ticking = false;
+    let scrollTick = false;
     const onScroll = () => {
-        if (!ticking) {
+        if (!scrollTick) {
             window.requestAnimationFrame(() => {
                 updateActiveLink();
-                ticking = false;
+                scrollTick = false;
             });
-            ticking = true;
+            scrollTick = true;
         }
     };
 
@@ -113,7 +109,7 @@
     window.addEventListener('load', updateActiveLink);
 
     // ============================================================
-    //  5. SMOOTH SCROLL UNTUK NAV LINK
+    //  5. SMOOTH SCROLL FOR NAV LINKS
     // ============================================================
     navLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
@@ -131,7 +127,7 @@
     });
 
     // ============================================================
-    //  6. KEYBOARD NAVIGATION — trap focus di mobile menu
+    //  6. KEYBOARD TRAP (mobile menu)
     // ============================================================
     if (navbarToggle && navbarMenu) {
         navbarMenu.addEventListener('keydown', (e) => {
@@ -151,103 +147,86 @@
     }
 
     // ============================================================
-    //  7. INTERSECTION OBSERVER — animasi skill bar saat masuk viewport
+    //  7. SKILL BARS — Intersection Observer
     // ============================================================
     if ('IntersectionObserver' in window) {
         const skillBars = document.querySelectorAll('.skill-bar__fill');
-        const observer = new IntersectionObserver(
+        const skillObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const bar = entry.target;
                         const width = bar.style.width;
-                        bar.style.transition = 'width 0.8s ease';
+                        bar.style.transition = 'width 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
                         bar.style.width = '0%';
                         void bar.offsetWidth;
                         bar.style.width = width;
-                        observer.unobserve(bar);
+                        skillObserver.unobserve(bar);
                     }
                 });
             },
             { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
         );
-
-        skillBars.forEach((bar) => observer.observe(bar));
+        skillBars.forEach((bar) => skillObserver.observe(bar));
     }
 
     // ============================================================
-    //  8. SCROLL REVEAL — Fade In/Out dengan Intersection Observer
+    //  8. SCROLL REVEAL
     // ============================================================
-    (function scrollReveal() {
-        'use strict';
+    (function initReveal() {
+        const revealElements = document.querySelectorAll(
+            '.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade'
+        );
 
-        function initReveal() {
-            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade');
+        if (revealElements.length === 0) return;
 
-            if (revealElements.length === 0) {
-                console.log('Scroll Reveal: Tidak ada elemen dengan kelas reveal');
-                return;
-            }
-
-            console.log(`Scroll Reveal: ${revealElements.length} elemen ditemukan`);
-
-            if (!('IntersectionObserver' in window)) {
-                revealElements.forEach(el => {
-                    el.classList.add('visible');
-                    el.classList.remove('hidden');
-                });
-                return;
-            }
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const element = entry.target;
-                    if (entry.isIntersecting) {
-                        element.classList.remove('hidden');
-                        element.classList.add('visible');
-                    }
-                });
-            }, {
-                root: null,
-                rootMargin: '0px 0px -50px 0px',
-                threshold: 0.1
-            });
-
-            revealElements.forEach(element => {
-                element.classList.add('hidden');
-                element.classList.remove('visible');
-                observer.observe(element);
-            });
-
-            // Tampilkan elemen yang sudah terlihat di awal
-            setTimeout(() => {
-                revealElements.forEach(element => {
-                    const rect = element.getBoundingClientRect();
-                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                    if (isVisible) {
-                        element.classList.remove('hidden');
-                        element.classList.add('visible');
-                    }
-                });
-            }, 300);
-
-            // Hero selalu tampil
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.classList.remove('hidden');
-                hero.classList.add('visible');
-            }
-
-            document.querySelectorAll('.initial-visible').forEach(el => {
-                el.classList.remove('hidden');
+        if (!('IntersectionObserver' in window)) {
+            revealElements.forEach((el) => {
                 el.classList.add('visible');
+                el.classList.remove('hidden');
             });
+            return;
         }
 
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initReveal);
-        } else {
-            initReveal();
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const el = entry.target;
+                    if (entry.isIntersecting) {
+                        el.classList.remove('hidden');
+                        el.classList.add('visible');
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: '0px 0px -30px 0px',
+                threshold: 0.08,
+            }
+        );
+
+        revealElements.forEach((el) => {
+            el.classList.add('hidden');
+            el.classList.remove('visible');
+            observer.observe(el);
+        });
+
+        // Show elements already in viewport on load
+        setTimeout(() => {
+            revealElements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.remove('hidden');
+                    el.classList.add('visible');
+                }
+            });
+        }, 200);
+
+        // Hero always visible
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.classList.remove('hidden');
+            hero.classList.add('visible');
         }
     })();
 
@@ -259,7 +238,6 @@
         const icon = document.getElementById('themeIcon');
         if (!toggle) return;
 
-        // Cek preferensi tersimpan
         const stored = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const isDark = stored === 'dark' || (!stored && prefersDark);
@@ -279,5 +257,45 @@
         });
     })();
 
-    console.log('Portfolio CV — siap digunakan!');
+    // ============================================================
+    //  10. SCROLL PROGRESS BAR
+    // ============================================================
+    const updateProgress = () => {
+        const scrollY = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? (scrollY / maxScroll) * 100 : 0;
+        if (scrollProgress) {
+            scrollProgress.style.width = `${progress}%`;
+            scrollProgress.setAttribute('aria-valuenow', Math.round(progress));
+        }
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+
+    // ============================================================
+    //  11. BACK TO TOP BUTTON
+    // ============================================================
+    const toggleBackToTop = () => {
+        if (backToTop) {
+            const visible = window.scrollY > 400;
+            backToTop.classList.toggle('visible', visible);
+        }
+    };
+
+    if (backToTop) {
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ============================================================
+    //  12. INITIALIZATION
+    // ============================================================
+    updateProgress();
+    toggleBackToTop();
+    updateActiveLink();
+
+    console.log('✨ Portfolio Daffa Aria — siap digunakan!');
 })();
